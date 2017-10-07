@@ -23,3 +23,14 @@ P(y=j|x) = exp(x^T*w_j) / sum_{k=1->K}{exp(x^T*w_k)}
 暫且無視掉 `bias` 項，不過意思到就可以了...
 
 通常多類別分類問題結合 `softmax` + `categorical cross-entropy loss` 使用
+
+`Softmax` 的導數：
+
+設 `y = sig(z)` ，也就是 `z` 向量 `softmax` 後的結果。
+
+我們想知道每個 `∂y/∂z`:
+
+```
+∂y_i/∂z_j: y_i*(1-y_i), if i==j
+∂y_i/∂z_j: -y_i*y_j, if i!=j
+```
