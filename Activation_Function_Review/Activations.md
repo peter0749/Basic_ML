@@ -1,7 +1,7 @@
 ### Softmax
 
 ```
-sig(z)_j = exp(z_j) / sum_{k=1->K}{exp(z_k}, for j = 1, ..., K
+sig(z)_j = exp(z_j) / sum_{k=1->K}{exp(z_k)}, for j = 1, ..., K
 ```
 
 `K` 代表類別數量
