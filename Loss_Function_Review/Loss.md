@@ -26,3 +26,11 @@ L(theta) = 1/n * sum_{i=1->n}{y_i*log(p_i) + (1-y_i)*log(1-p_i)}
 
 因此 Loss 會大於 0 ，可以想像成我們要同時懲罰應該被分類到而未被分類的，
 還有不應該被分類到而被分類的，上述公式又是可微分的函數，所以可以利用梯度下降使得最後 `L*(theta) -> 0`
+
+Loss 的正負號實作時會有差異，但不影響整體概念。
+
+
+要使用這個 Loss Function ，可以在我們的 model 最後加上一層 `softmax` 函數，會將輸出的 score 壓成一個離散的機率分佈，就可以用這個 Loss function 優化整個 model。
+
+另外，當類別數等於 2 時，就是一個 `Binomial cross-entropy loss` ，也可用於二元分類問題。
+
