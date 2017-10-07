@@ -30,6 +30,8 @@ L(theta) = 1/n * sum_{i=1->n}{y_i*log(p_i) + (1-y_i)*log(1-p_i)}
 
 Loss 的正負號實作時會有差異，但不影響整體概念。
 
+> 註記：實作時，Loss 基本上不會==0 ，只會逼近於 0 而已。
+
 
 要使用這個 Loss Function ，可以在我們的 model 最後加上一層 `softmax` 函數，會將輸出的 score 壓成一個離散的機率分佈，就可以用這個 Loss function 優化整個 model。
 
