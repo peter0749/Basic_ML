@@ -18,6 +18,8 @@ Softmax 後的 z 中下標 `j` 的元素，被歸一化到 [0,1) 之間，
 P(y=j|x) = exp(x^T*w_j) / sum_{k=1->K}{exp(x^T*w_k)}
 ```
 
+（公式從 wiki 抄過來）
+
 暫且無視掉 `bias` 項，不過意思到就可以了...
 
 通常多類別分類問題結合 `softmax` + `categorical cross-entropy loss` 使用
