@@ -8,7 +8,7 @@ hardsign <- function(x) {
 }
 
 softsign <- function(x) {
-  sig <- 1 / (abs(x)+1)
+  sig <- x / (abs(x)+1)
 }
 
 relu <- function(x) {
